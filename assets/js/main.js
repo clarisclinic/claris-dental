@@ -279,6 +279,21 @@ function fillDetails(){
   document.querySelectorAll('[data-icon]').forEach(el=>{const i=ICO[el.dataset.icon]; if(i)el.innerHTML=i;});
 }
 
+
+/* The header and footer are injected after the browser has already jumped to
+   any #anchor in the URL, and web fonts land later still — both shift the
+   layout, leaving the reader thousands of pixels past the section they asked
+   for. Re-aim at the anchor once the page has settled. */
+function restoreHash(){
+  if(!location.hash) return;
+  let el; try{ el=document.querySelector(location.hash); }catch(e){ return; }
+  if(!el) return;
+  const go=()=>el.scrollIntoView({block:'start'});
+  go();
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(()=>setTimeout(go,80));
+  window.addEventListener('load',()=>setTimeout(go,80),{once:true});
+}
+
 function boot(){
   buildChrome();
   fillDetails();
@@ -290,6 +305,7 @@ function boot(){
   initForm();
   /* re-run translation after the header/footer were injected */
   if(window.CLARIS_APPLY_LANG) window.CLARIS_APPLY_LANG();
+  restoreHash();
 }
 if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot);
 else boot();
