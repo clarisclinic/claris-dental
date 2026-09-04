@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="contact.title">Claris Dental Clinic</title>
+<meta name="description" data-i18n-attr="content:contact.desc" content="Claris Dental Clinic">
+<meta name="theme-color" content="#14110D">
+<meta property="og:type" content="website">
+<meta property="og:title" data-i18n-attr="content:contact.title" content="Claris Dental Clinic">
+<meta property="og:description" data-i18n-attr="content:contact.desc" content="Claris Dental Clinic">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300..700&family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contact.html">
+<a class="skip" href="#main">Skip to content</a>
+<div id="siteHeaderMount"></div>
+<main id="main">
+
+<section class="phead">
+  <div class="container">
+    <p class="crumb"><a href="index.html" data-i18n="nav.home"></a> / <span data-i18n="nav.contact"></span></p>
+    <p class="eyebrow" data-i18n="contact.eyebrow"></p>
+    <h1 class="h1" data-i18n="contact.h1"></h1>
+    <p class="lead" style="margin-top:22px" data-i18n="contact.lead"></p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container split" style="align-items:start">
+
+    <div class="card reveal" style="padding:clamp(26px,3vw,40px)">
+      <h2 class="h3" style="margin-bottom:22px" data-i18n="contact.form.title"></h2>
+      <div class="form__ok" id="formOk" data-i18n="contact.form.ok"></div>
+      <form class="form" id="bookingForm" style="margin-top:16px" novalidate>
+        <div class="form__row">
+          <div class="field"><label for="f-name" data-i18n="contact.form.name"></label>
+            <input id="f-name" name="name" required data-i18n-attr="placeholder:contact.form.namePh"></div>
+          <div class="field"><label for="f-phone" data-i18n="contact.form.phone"></label>
+            <input id="f-phone" name="phone" type="tel" required data-i18n-attr="placeholder:contact.form.phonePh"></div>
+        </div>
+        <div class="field"><label for="f-email" data-i18n="contact.form.email"></label>
+          <input id="f-email" name="email" type="email" data-i18n-attr="placeholder:contact.form.emailPh"></div>
+        <div class="form__row">
+          <div class="field"><label for="f-service" data-i18n="contact.form.service"></label>
+            <select id="f-service" name="service">
+              <option value="" data-i18n="contact.form.s0"></option>
+              <option data-i18n="contact.form.s1"></option><option data-i18n="contact.form.s2"></option>
+              <option data-i18n="contact.form.s3"></option><option data-i18n="contact.form.s4"></option>
+              <option data-i18n="contact.form.s5"></option><option data-i18n="contact.form.s6"></option>
+              <option data-i18n="contact.form.s7"></option><option data-i18n="contact.form.s8"></option>
+            </select></div>
+          <div class="field"><label for="f-date" data-i18n="contact.form.date"></label>
+            <input id="f-date" name="date" type="date"></div>
+        </div>
+        <div class="field"><label for="f-msg" data-i18n="contact.form.msg"></label>
+          <textarea id="f-msg" name="message" data-i18n-attr="placeholder:contact.form.msgPh"></textarea></div>
+        <button type="submit" class="btn btn--lg" data-i18n="contact.form.submit"></button>
+        <p class="form__note" data-i18n="contact.form.note"></p>
+      </form>
+    </div>
+
+    <div class="reveal" data-d="2">
+      <h2 class="h3" style="margin-bottom:10px" data-i18n="contact.info.title"></h2>
+      <div class="info"><div class="info__ic" data-icon="pin"></div><div>
+        <b data-i18n="contact.addr"></b><a href="#" data-href="map" data-detail="address"></a></div></div>
+      <div class="info"><div class="info__ic" data-icon="phone"></div><div>
+        <b data-i18n="contact.phone"></b><a href="#" data-href="tel" data-detail="phone" dir="ltr"></a></div></div>
+      <div class="info"><div class="info__ic" data-icon="wa"></div><div>
+        <b data-i18n="contact.wa"></b><a href="#" data-href="wa" data-detail="whatsapp" dir="ltr"></a></div></div>
+      <div class="info"><div class="info__ic" data-icon="mail"></div><div>
+        <b data-i18n="contact.email"></b><a href="#" data-href="mail" data-detail="email" dir="ltr"></a></div></div>
+      <div class="info"><div class="info__ic" data-icon="clock"></div><div>
+        <b data-i18n="contact.hours"></b><span data-i18n="contact.hoursVal"></span></div></div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+        <a href="#" data-href="wa" class="btn" data-i18n="cta.whatsapp"></a>
+        <a href="#" data-href="tel" class="btn btn--ghost" data-i18n="cta.call"></a>
+      </div>
+
+      <div class="ph" style="margin-top:32px;aspect-ratio:16/10" data-i18n-attr="data-label:contact.map">
+        <span data-icon="pin" style="width:38px;height:38px;opacity:.4"></span>
+      </div>
+
+      <div style="margin-top:26px">
+        <h3 class="h3" style="font-size:1.15rem;margin-bottom:8px" data-i18n="contact.parking.title"></h3>
+        <p class="muted" style="font-size:15px" data-i18n="contact.parking.lead"></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+<div id="siteFooterMount"></div>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/i18n.js" defer></script>
+</body>
+</html>
