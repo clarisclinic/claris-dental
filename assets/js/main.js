@@ -85,6 +85,7 @@ function buildChrome(){
         ${navLink('cases.html','nav.cases',page)}
         ${navLink('team.html','nav.team',page)}
         ${navLink('contact.html','nav.contact',page)}
+        <a href="contact.html" class="btn nav__cta" data-i18n="cta.book"></a>
       </nav>
       <div class="header__actions">
         <div class="lang" role="group" aria-label="Language">
@@ -251,6 +252,12 @@ function initFilters(){
 }
 
 /* Appointment form — no backend yet, hands off to WhatsApp */
+function initMap(){
+  document.querySelectorAll('[data-map-tap]').forEach(btn=>{
+    btn.addEventListener('click',()=>btn.closest('.map').classList.add('is-live'));
+  });
+}
+
 function initForm(){
   const form=document.getElementById('bookingForm'); if(!form)return;
   form.addEventListener('submit',e=>{
@@ -326,6 +333,7 @@ function boot(){
   initCounters();
   initBA();
   initFilters();
+  initMap();
   initForm();
   /* re-run translation after the header/footer were injected */
   if(window.CLARIS_APPLY_LANG) window.CLARIS_APPLY_LANG();
