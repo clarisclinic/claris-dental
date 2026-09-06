@@ -71,7 +71,7 @@ function navLink(href,key,page){
 function buildChrome(){
   const page=document.body.dataset.page||'index.html';
   const logo=`<a href="index.html" class="brand" aria-label="Claris Dental Clinic">
-      <img src="assets/img/logo-wordmark.svg" alt="Claris Dental Clinic" class="brand__mark" width="965" height="341">
+      <img src="assets/img/logo-wordmark-gold.svg" alt="Claris Dental Clinic" class="brand__mark" width="965" height="341">
     </a>`;
 
   const header=`
