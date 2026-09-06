@@ -8,14 +8,22 @@
    PLACEHOLDERS. Replace these five values with the clinic's real details and
    they update everywhere on the site at once.                                */
 const CLARIS = {
-  phone:      "+20 100 000 0000",
-  phoneHref:  "+201000000000",
-  whatsapp:   "201000000000",          /* country code + number, no + or spaces */
-  email:      "hello@clarisdental.com",
-  address:    "Clinic address goes here, District, Cairo, Egypt",
-  instagram:  "https://instagram.com/",
-  facebook:   "https://facebook.com/",
-  mapsUrl:    "https://maps.google.com/"
+  /* Displayed number and click-to-call. Egypt: drop the leading 0, prefix +20 */
+  phone:      "+20 10 2008 8944",
+  phoneHref:  "+201020088944",
+  /* WhatsApp: country code + number, no + and no spaces */
+  whatsapp:   "201156223376",
+  whatsappDisplay: "+20 11 5622 3376",
+  /* No clinic email supplied yet — leave "" and the email rows stay hidden
+     rather than publishing an address that bounces. */
+  email:      "",
+  address:    "Feda Mall, behind AUC, South Investors Area, New Cairo, Cairo, Egypt",
+  addressAr:  "مول فيدا، خلف الجامعة الأمريكية، منطقة المستثمرين الجنوبية، القاهرة الجديدة، مصر",
+  instagram:  "https://www.instagram.com/claris_dental_clinic",
+  facebook:   "https://www.facebook.com/profile.php?id=61573920159400",
+  mapsUrl:    "https://maps.app.goo.gl/VZRF8v6L4K2E1ky66",
+  lat:        30.003539,
+  lng:        31.500034
 };
 const WA_MSG = encodeURIComponent("Hello Claris Dental, I would like to book an appointment.");
 const WA_LINK = `https://wa.me/${CLARIS.whatsapp}?text=${WA_MSG}`;
@@ -124,9 +132,9 @@ function buildChrome(){
         <div>
           <h4 data-i18n="foot.visit"></h4>
           <ul>
-            <li><a href="${CLARIS.mapsUrl}" target="_blank" rel="noopener">${CLARIS.address}</a></li>
+            <li><a href="${CLARIS.mapsUrl}" target="_blank" rel="noopener" data-detail="address">${CLARIS.address}</a></li>
             <li><a href="tel:${CLARIS.phoneHref}" dir="ltr">${CLARIS.phone}</a></li>
-            <li><a href="mailto:${CLARIS.email}" dir="ltr">${CLARIS.email}</a></li>
+            ${CLARIS.email ? `<li><a href="mailto:${CLARIS.email}" dir="ltr">${CLARIS.email}</a></li>` : ""}
             <li><span data-i18n="contact.hoursVal"></span></li>
           </ul>
         </div>
@@ -263,22 +271,38 @@ function initForm(){
   });
 }
 
-/* Fill placeholder contact values from the CLARIS object */
+/* Push the clinic's details into every slot that shows them. Re-runs on a
+   language change so the address can switch script with the rest of the page. */
 function fillDetails(){
-  const map={
-    'phone':CLARIS.phone,'email':CLARIS.email,'address':CLARIS.address,
-    'whatsapp':'+'+CLARIS.whatsapp
+  const ar = document.documentElement.lang === 'ar';
+  const map = {
+    phone:   CLARIS.phone,
+    email:   CLARIS.email,
+    address: ar && CLARIS.addressAr ? CLARIS.addressAr : CLARIS.address,
+    whatsapp: CLARIS.whatsappDisplay || ('+' + CLARIS.whatsapp)
   };
   document.querySelectorAll('[data-detail]').forEach(el=>{
-    const v=map[el.dataset.detail]; if(v)el.textContent=v;
+    const v = map[el.dataset.detail];
+    if(v) el.textContent = v;
   });
   document.querySelectorAll('[data-href="tel"]').forEach(a=>a.href='tel:'+CLARIS.phoneHref);
   document.querySelectorAll('[data-href="mail"]').forEach(a=>a.href='mailto:'+CLARIS.email);
   document.querySelectorAll('[data-href="wa"]').forEach(a=>{a.href=WA_LINK;a.target='_blank';a.rel='noopener';});
   document.querySelectorAll('[data-href="map"]').forEach(a=>{a.href=CLARIS.mapsUrl;a.target='_blank';a.rel='noopener';});
   document.querySelectorAll('[data-icon]').forEach(el=>{const i=ICO[el.dataset.icon]; if(i)el.innerHTML=i;});
-}
+  document.querySelectorAll('[data-map]').forEach(f=>{
+    const src=`https://maps.google.com/maps?q=${CLARIS.lat},${CLARIS.lng}&z=16&hl=${ar?'ar':'en'}&output=embed`;
+    if(f.getAttribute('src')!==src) f.setAttribute('src',src);
+  });
 
+  /* hide any row that has nothing to show — an empty label reads as broken */
+  if(!CLARIS.email){
+    document.querySelectorAll('[data-detail="email"]').forEach(el=>{
+      const row = el.closest('.info'); if(row) row.hidden = true;
+    });
+  }
+}
+document.addEventListener('claris:lang', fillDetails);
 
 /* The header and footer are injected after the browser has already jumped to
    any #anchor in the URL, and web fonts land later still — both shift the

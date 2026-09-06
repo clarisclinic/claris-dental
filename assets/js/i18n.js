@@ -185,7 +185,7 @@ en:{
   "contact.addr":"Address","contact.phone":"Phone","contact.wa":"WhatsApp","contact.email":"Email","contact.hours":"Opening hours",
   "contact.hoursVal":"Saturday – Thursday: 11:00 – 21:00<br>Friday: closed",
   "contact.map":"Map — the clinic location will be embedded here",
-  "contact.parking.title":"Getting here","contact.parking.lead":"Placeholder directions — landmark, parking and the nearest metro or main road will go here once confirmed.",
+  "contact.parking.title":"Getting here","contact.parking.lead":"We are inside Feda Mall, in the South Investors Area of New Cairo — directly behind the American University in Cairo. Tap the map above for turn-by-turn directions from wherever you are.",
 
   /* ---- footer ---- */
   "foot.tag":"A modern dental clinic focused on careful diagnosis, digital planning and results that look like they were always yours.",
@@ -367,7 +367,7 @@ ar:{
   "contact.addr":"العنوان","contact.phone":"الهاتف","contact.wa":"واتساب","contact.email":"البريد الإلكتروني","contact.hours":"مواعيد العمل",
   "contact.hoursVal":"السبت إلى الخميس: من 11 صباحاً حتى 9 مساءً<br>الجمعة: مغلق",
   "contact.map":"الخريطة — سيتم تضمين موقع العيادة هنا",
-  "contact.parking.title":"كيف تصل إلينا","contact.parking.lead":"وصف مبدئي للطريق — العلامة المميزة وأماكن الانتظار وأقرب مترو أو طريق رئيسي ستوضع هنا بعد التأكيد.",
+  "contact.parking.title":"كيف تصل إلينا","contact.parking.lead":"نحن داخل مول فيدا في منطقة المستثمرين الجنوبية بالقاهرة الجديدة — خلف الجامعة الأمريكية بالقاهرة مباشرة. اضغط على الخريطة أعلاه للحصول على الاتجاهات من مكانك.",
 
   "foot.tag":"عيادة أسنان حديثة تركز على دقة التشخيص والتخطيط الرقمي ونتائج تبدو وكأنها كانت لك دائماً.",
   "foot.explore":"تصفح","foot.treat":"العلاجات","foot.visit":"زُرنا",
