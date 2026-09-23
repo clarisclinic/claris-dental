@@ -18,6 +18,7 @@ en:{
   "cta.viewCases":"See real results","cta.allServices":"Explore all treatments",
   "common.learnMore":"Learn more","common.before":"Before","common.after":"After",
   "common.drag":"Drag to compare",
+  "common.more":"Read more","common.less":"Show less",
   "common.treatedBy":"Treated by",
 
   /* ---- home ---- */
@@ -221,6 +222,7 @@ ar:{
   "cta.viewCases":"شاهد نتائج حقيقية","cta.allServices":"تصفح كل العلاجات",
   "common.learnMore":"اعرف المزيد","common.before":"قبل","common.after":"بعد",
   "common.drag":"اسحب للمقارنة",
+  "common.more":"المزيد","common.less":"عرض أقل",
   "common.treatedBy":"عالجها",
 
   "home.title":"عيادة كلاريس لطب الأسنان — دقة في العلاج وجمال في النتيجة",

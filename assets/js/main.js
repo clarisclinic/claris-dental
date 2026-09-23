@@ -263,6 +263,33 @@ function initMap(){
   });
 }
 
+/* Long reviews are clamped to four lines, the way Google shows them. The
+   button only appears where text is genuinely cut off — re-measured on
+   resize and on a language change, since Arabic wraps to a different depth. */
+function initQuotes(){
+  const quotes=[...document.querySelectorAll('.quote')].filter(q=>q.querySelector('.quote__more'));
+  if(!quotes.length) return;
+  const label=q=>{
+    const b=q.querySelector('.quote__more');
+    b.textContent = q.classList.contains('is-open') ? (b.dataset.less||'') : (b.dataset.more||'');
+  };
+  const measure=()=>quotes.forEach(q=>{
+    const p=q.querySelector('p');
+    if(q.classList.contains('is-open')){ label(q); return; }
+    q.classList.remove('can-expand');
+    if(p.scrollHeight > p.clientHeight + 2) q.classList.add('can-expand');
+    label(q);
+  });
+  quotes.forEach(q=>q.querySelector('.quote__more').addEventListener('click',()=>{
+    q.classList.toggle('is-open'); label(q);
+  }));
+  measure();
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  window.addEventListener('load',measure,{once:true});
+  document.addEventListener('claris:lang',()=>setTimeout(measure,60));
+  let t; window.addEventListener('resize',()=>{clearTimeout(t);t=setTimeout(measure,150);},{passive:true});
+}
+
 function initForm(){
   const form=document.getElementById('bookingForm'); if(!form)return;
   form.addEventListener('submit',e=>{
@@ -341,6 +368,7 @@ function boot(){
   initBA();
   initFilters();
   initMap();
+  initQuotes();
   initForm();
   /* re-run translation after the header/footer were injected */
   if(window.CLARIS_APPLY_LANG) window.CLARIS_APPLY_LANG();
