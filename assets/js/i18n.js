@@ -18,6 +18,7 @@ en:{
   "cta.viewCases":"See real results","cta.allServices":"Explore all treatments",
   "common.learnMore":"Learn more","common.before":"Before","common.after":"After",
   "common.drag":"Drag to compare",
+  "common.treatedBy":"Treated by",
 
   /* ---- home ---- */
   "home.title":"Claris Dental Clinic — Precision dentistry, beautifully done",
@@ -48,7 +49,7 @@ en:{
   "home.ba.eyebrow":"Before &amp; after",
   "home.ba.title":"Real cases, from this clinic",
   "home.ba.lead":"Drag the handle to compare. Every case shown here was treated by our team and published with the patient's permission.",
-  "home.ba.case":"Smile makeover — porcelain veneers",
+  "home.ba.case":"Composite veneers — completed in a single visit",
 
   "home.steps.eyebrow":"How it works",
   "home.steps.title":"Four steps, no guesswork",
@@ -138,15 +139,10 @@ en:{
   "cases.desc":"Before and after photographs of real treatments carried out at Claris Dental Clinic.",
   "cases.eyebrow":"Case gallery",
   "cases.h1":"Results, not promises.",
-  "cases.lead":"Every case below was treated at Claris and published with the patient's consent. Drag any image to compare before and after.",
-  "cases.f.all":"All cases","cases.f.cos":"Cosmetic","cases.f.imp":"Implants","cases.f.ort":"Orthodontics","cases.f.gen":"Restorative",
-  "cases.c1":"Porcelain veneers — upper arch","cases.c1d":"Worn and discoloured front teeth restored with eight veneers over three visits.",
-  "cases.c2":"Composite bonding — edge repair","cases.c2d":"Chipped incisal edges rebuilt in a single appointment, no drilling required.",
-  "cases.c3":"Single implant — upper premolar","cases.c3d":"Implant placed to a digital plan and restored with a ceramic crown.",
-  "cases.c4":"Clear aligners — 9 months","cases.c4d":"Mild crowding of the lower arch corrected without fixed braces.",
-  "cases.c5":"Full smile makeover","cases.c5d":"Combined whitening, gum contouring and veneers over eight weeks.",
-  "cases.c6":"Crown &amp; root canal","cases.c6d":"A heavily broken molar saved with endodontic treatment and a ceramic crown.",
-  "cases.note":"Placeholder images. Every slot below is ready for the clinic's real photographs — swap the file, keep the name.",
+  "cases.lead":"Every case here was treated at Claris and published with the patient's permission. Drag the handle to compare before and after.",
+  "cases.c1by":"Dr Nourhan Tarek",
+  "cases.c1":"Composite veneers — upper four front teeth","cases.c1d":"Multilayered composite veneers built directly onto the four upper front teeth, closing the gaps and correcting shape, edge and colour. Completed in a single visit.",
+  "cases.note":"More cases will be added here as patients give their permission.",
 
   /* ---- team ---- */
   "team.title":"Our team — Claris Dental Clinic",
@@ -219,6 +215,7 @@ ar:{
   "cta.viewCases":"شاهد نتائج حقيقية","cta.allServices":"تصفح كل العلاجات",
   "common.learnMore":"اعرف المزيد","common.before":"قبل","common.after":"بعد",
   "common.drag":"اسحب للمقارنة",
+  "common.treatedBy":"عالجها",
 
   "home.title":"عيادة كلاريس لطب الأسنان — دقة في العلاج وجمال في النتيجة",
   "home.desc":"عيادة أسنان حديثة تقدم تجميل الأسنان والفينير والزراعة والتقويم والعلاج العام. احجز استشارتك اليوم.",
@@ -248,7 +245,7 @@ ar:{
   "home.ba.eyebrow":"قبل وبعد",
   "home.ba.title":"حالات حقيقية من داخل العيادة",
   "home.ba.lead":"اسحب المؤشر للمقارنة. كل حالة معروضة هنا عالجها فريقنا ونُشرت بموافقة المريض.",
-  "home.ba.case":"تجميل الابتسامة — فينير بورسلين",
+  "home.ba.case":"فينير كومبوزيت — في جلسة واحدة",
 
   "home.steps.eyebrow":"كيف نعمل",
   "home.steps.title":"أربع خطوات واضحة، بلا تخمين",
@@ -335,15 +332,10 @@ ar:{
   "cases.desc":"صور قبل وبعد لحالات حقيقية عولجت في عيادة كلاريس لطب الأسنان.",
   "cases.eyebrow":"معرض الحالات",
   "cases.h1":"نتائج، لا وعود.",
-  "cases.lead":"كل حالة أدناه عولجت في كلاريس ونُشرت بموافقة المريض. اسحب أي صورة للمقارنة بين قبل وبعد.",
-  "cases.f.all":"كل الحالات","cases.f.cos":"تجميل","cases.f.imp":"زراعة","cases.f.ort":"تقويم","cases.f.gen":"ترميم",
-  "cases.c1":"فينير بورسلين — الفك العلوي","cases.c1d":"أسنان أمامية متآكلة ومتغيرة اللون أُعيد بناؤها بثمانية فينير على ثلاث زيارات.",
-  "cases.c2":"حشوات تجميلية — إصلاح الحواف","cases.c2d":"حواف مكسورة أُعيد بناؤها في موعد واحد، بدون أي برد للأسنان.",
-  "cases.c3":"زراعة سن — ضاحك علوي","cases.c3d":"زرعة وُضعت وفق خطة رقمية ورُكّب عليها تاج سيراميك.",
-  "cases.c4":"مصففات شفافة — 9 أشهر","cases.c4d":"ازدحام بسيط في الفك السفلي صُحّح دون تقويم ثابت.",
-  "cases.c5":"تجميل ابتسامة كامل","cases.c5d":"تبييض وتحديد لثة وفينير على مدى ثمانية أسابيع.",
-  "cases.c6":"تاج بعد حشو عصب","cases.c6d":"ضرس متهدم أُنقذ بعلاج الجذور وتاج سيراميك.",
-  "cases.note":"صور مبدئية. كل مكان هنا جاهز لصور العيادة الحقيقية — استبدل الملف واحتفظ بالاسم نفسه.",
+  "cases.lead":"كل حالة هنا عولجت في كلاريس ونُشرت بموافقة المريض. اسحب المؤشر للمقارنة بين قبل وبعد.",
+  "cases.c1by":"د. نورهان طارق",
+  "cases.c1":"فينير كومبوزيت — الأسنان الأمامية العلوية الأربعة","cases.c1d":"فينير كومبوزيت متعدد الطبقات بُني مباشرة على الأسنان الأمامية العلوية الأربعة، لإغلاق الفراغات وتصحيح الشكل والحواف واللون. أُنجزت في جلسة واحدة.",
+  "cases.note":"ستُضاف حالات أخرى هنا تباعاً بموافقة المرضى.",
 
   "team.title":"فريق العمل — عيادة كلاريس لطب الأسنان",
   "team.desc":"تعرّف على أطباء وفريق عيادة كلاريس لطب الأسنان.",
