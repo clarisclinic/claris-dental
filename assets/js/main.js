@@ -22,6 +22,11 @@ const CLARIS = {
   instagram:  "https://www.instagram.com/claris_dental_clinic",
   facebook:   "https://www.facebook.com/profile.php?id=61573920159400",
   mapsUrl:    "https://maps.app.goo.gl/VZRF8v6L4K2E1ky66",
+  /* Reviews. Once the Google Business Profile is CLAIMED, Google hands over a
+     short link like https://g.page/r/XXXXXXXX/review that opens the review box
+     in one tap — paste it into reviewUrl and it takes effect everywhere. */
+  reviewsUrl: "https://maps.app.goo.gl/VZRF8v6L4K2E1ky66",
+  reviewUrl:  "https://maps.app.goo.gl/VZRF8v6L4K2E1ky66",
   lat:        30.003539,
   lng:        31.500034
 };
@@ -296,6 +301,8 @@ function fillDetails(){
   document.querySelectorAll('[data-href="mail"]').forEach(a=>a.href='mailto:'+CLARIS.email);
   document.querySelectorAll('[data-href="wa"]').forEach(a=>{a.href=WA_LINK;a.target='_blank';a.rel='noopener';});
   document.querySelectorAll('[data-href="map"]').forEach(a=>{a.href=CLARIS.mapsUrl;a.target='_blank';a.rel='noopener';});
+  document.querySelectorAll('[data-href="reviews"]').forEach(a=>{a.href=CLARIS.reviewsUrl;a.target='_blank';a.rel='noopener';});
+  document.querySelectorAll('[data-href="review"]').forEach(a=>{a.href=CLARIS.reviewUrl;a.target='_blank';a.rel='noopener';});
   document.querySelectorAll('[data-icon]').forEach(el=>{const i=ICO[el.dataset.icon]; if(i)el.innerHTML=i;});
   document.querySelectorAll('[data-map]').forEach(f=>{
     const src=`https://maps.google.com/maps?q=${CLARIS.lat},${CLARIS.lng}&z=16&hl=${ar?'ar':'en'}&output=embed`;
